@@ -4,15 +4,31 @@ body {
     text-align: center;
 }
 
-.container {
+.wrapper > * {
     border: 3px solid black;
     border-radius: 10px;
-    height: 200px;
-    width: 200px;
     background-color: lightgray;
-    margin-left: auto;
-    margin-right: auto;
 }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+  .one {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .two {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .three {
+    grid-column: 3;
+    grid-row: 1;
+  }
 
 .img {
     height: 100px;
