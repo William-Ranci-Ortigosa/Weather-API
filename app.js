@@ -51,3 +51,30 @@ $.getJSON('http://api.openweathermap.org/data/2.5/weather?q=Philadelphia&units=i
     $('.six .icons').attr('src', icon)
     $('.six .temp').append(temp + '&#176;' + 'F')
 });
+
+$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=San%20Antonio&units=imperial&APPID=b69f44fc1c775945b18a67465501e0e9', function(data) {
+    var icon = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png'
+    var desc = data.weather[0].main;
+    var temp = data.main.temp;
+    $('.seven .desc').append(desc)
+    $('.seven .icons').attr('src', icon)
+    $('.seven .temp').append(temp + '&#176;' + 'F')
+});
+
+$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=San%20Diego&units=imperial&APPID=b69f44fc1c775945b18a67465501e0e9', function(data) {
+    var icon = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png'
+    var desc = data.weather[0].main;
+    var temp = data.main.temp;
+    $('.eight .desc').append(desc)
+    $('.eight .icons').attr('src', icon)
+    $('.eight .temp').append(temp + '&#176;' + 'F')
+});
+
+$.getJSON('http://api.openweathermap.org/data/2.5/weather?q=Dallas&units=imperial&APPID=b69f44fc1c775945b18a67465501e0e9', function(data) {
+    var icon = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png'
+    var desc = data.weather[0].main;
+    var temp = data.main.temp;
+    $('.nine .desc').append(desc)
+    $('.nine .icons').attr('src', icon)
+    $('.nine .temp').append(temp + '&#176;' + 'F')
+});
