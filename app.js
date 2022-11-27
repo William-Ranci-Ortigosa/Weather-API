@@ -44,8 +44,6 @@ getData('San Antonio', '.seven')
 getData('San Diego', '.eight')
 getData('Dallas', '.nine')
 
-getMoreData('New York', '.modal-data')
-
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -57,6 +55,12 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
+  let arr = document.getElementsByClassName('refresh')
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].innerText = ''
+  }
+  const query = document.getElementById('search').value;
+  getMoreData(query, '.modal-data');
   modal.style.display = "block";
 }
 
